@@ -1,6 +1,7 @@
 # AngularX
 
 ## Topics
+
 ### Module #1 – ES6, TypeScript, Angular-CLI and Angular Components
 #### ES6
 - Module system
@@ -49,6 +50,45 @@
 - Configuring headers
 - Interceptors
 - Progress events
+
+### Angular Router
+#### Setting up the router
+#### Navigation
+#### Child routes
+#### Routing params
+#### Lazy loading
+#### Guards and hooks
+
+### angular Modules, directives and Pipes
+#### Angular Modules
+- Root Module vs. Feature Module
+- Module definition
+- Module configuration
+#### Directives
+- Types of directives
+- Built-in directives
+- Writing your own directives
+#### Pipes
+- Sync and async Pipes
+- Built-in Pipes
+#### Writing your own pipes
+
+### Angular Forms
+#### Template-driven forms
+#### Reactive forms
+#### FormBuilder
+#### Form validation
+#### Custom validators
+#### Async validators
+
+### State management with ngRx
+#### Understanding Redux architecture
+#### ngRx Store
+#### Actions & Reducers
+#### Middleware
+#### Effects and Facades
+#### Action Splitters
+
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
