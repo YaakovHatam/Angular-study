@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Student } from './models/student.model';
+import { CounterService } from './services/counter.service';
 
 @Component({
   selector: 'app-root',
@@ -6,26 +8,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-    onlyHobbies = [];
-    constructor() {
-        console.log('app cmpnnt init')
-    }
-    students = []
-
-
-    add() {
-        this.students.push({
-            id: Math.floor(Math.random() * 1000),
-            name:'student name 11111',
-                age: 23,
-                hobbies:[]
-            });
+    constructor(private asd: CounterService) {
+        
     }
 
-    onStudentAddHobbie(data) {
-        console.log(data);
-        const student = this.students.find(s => data.id === s.id);
-        student.hobbies.push(data.hobbie);
-        this.onlyHobbies.push(data.hobbie);
-    }
+    students: Student[] = [
+        {
+            name: 'Student 1',
+            age: 23
+        },
+        {
+            name: 'Student 2',
+            age: 43
+        }, {
+            name: 'Student 1',
+            age: 23
+        },
+        {
+            name: 'Student 2',
+            age: 43
+        }, {
+            name: 'Student 1',
+            age: 23
+        },
+        {
+            name: 'Student 2',
+            age: 43
+        }
+    ]
+
 }

@@ -1,28 +1,20 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Student } from '../models/student.model';
+import { CounterService } from '../services/counter.service';
 
 @Component({
-  selector: 'app-student',
-  templateUrl: './student.component.html',
-  styleUrls: ['./student.component.less']
+    selector: 'app-student',
+    templateUrl: './student.component.html',
+    styleUrls: ['./student.component.less']
 })
 export class StudentComponent implements OnInit {
-    @Output() hobbieUpdate: EventEmitter<any> = new EventEmitter<any>();
-    @Input() student;
-    hobbiesStartCount = 5;
-    // hobbies = [];
-  constructor() { }
-//'Music', 'Tennis', 'Football'
-  ngOnInit() {
+    @Input() student: Student;
 
-    
-  }
+    constructor(private counterService: CounterService) { }
 
-  addHobbie() {
-      const hobbie = prompt('What is your hobbie?');
-      this.hobbieUpdate.emit({
-          id: this.student.id,
-          hobbie: hobbie
-      });
-  }
+    ngOnInit() {
+        console.log(this.counterService.getCount());
+
+    }
 
 }

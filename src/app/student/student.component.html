@@ -1,11 +1,6 @@
-<h3> student name: {{ student.name }}</h3>
 <div>
-    <span>age: {{ student.age }}</span>
-    <div *ngIf="student.hobbies.length > 0">
-        <h4>hobbies:</h4>
-        <ol [start]="hobbiesStartCount">
-            <li *ngFor="let hobby of student.hobbies">{{ hobby }}</li>
-        </ol>
-    </div>
-    <button (click)='addHobbie()'>Add hobbie</button>
+    <h2>Name: <strong>{{ student.name }}</strong> </h2>
+    <p>
+        Student age: {{ student.age }}
+    </p>
 </div>
